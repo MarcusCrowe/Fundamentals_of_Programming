@@ -56,7 +56,6 @@ print(first_name + ' ' + last_name + ': ' + str(age))
 # String Multiplication
 print('Hello'*3)
 # Can only add two strings, and can only multiple a string with an int
-'''
 
 # Accessing string characters
 emp_name = "Jane Doe"
@@ -64,3 +63,28 @@ print(emp_name[3])
 #print(emp_name[8])  # throws index out of bounds error because the last character is at index 7
 
 print(emp_name.index('n'))
+'''
+
+# String Slicing
+emp_name = "Jane Doe"
+print(emp_name[2:6])
+print(emp_name[:4])     #start from the beginning and go until the third index
+print(emp_name[5:])     #start from 5 and go through the rest of the indeces
+print(emp_name[-4:-1])  #negative values go backwards, last index is -1, the second to last -2, etc
+print(emp_name[1:6:2])  #step value, returns every other index
+
+print(emp_name.count('e'))  #Counts how many 'e' are in the string
+print(emp_name.find('Doe')) #Finds the index at which 'Doe' starts
+emp_name = emp_name.replace('Jane', 'John') #Replaces some part of the string with something else
+print('oh' in emp_name) #Membership test, finds if something is in the list/string
+
+#String Formatting
+student_name = 'Alice'
+score = 87
+
+print(student_name + ':', score)
+print("Name: {} Score: {}".format(student_name, score))
+
+#f-strings
+print(f'Name: {student_name} Score: {score}')
+print(f'10 times 3 is {10*3}')
